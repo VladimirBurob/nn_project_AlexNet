@@ -11,7 +11,7 @@ def app():
         'Pasture', 'Permanent Crop', 'Residential', 'River', 'Sea/Lake'
     ]
 
-    device = torch.device("mps")
+    device = torch.device("cpu")
 
     @st.cache_resource
     def load_model():
