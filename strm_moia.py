@@ -17,7 +17,7 @@ def app():
     def load_model():
         model = models.resnet18(pretrained=True)
         model.fc = torch.nn.Linear(model.fc.in_features, len(classes))
-        model.load_state_dict(torch.load("/Users/vladimir/Desktop/ds_bootcamp/nn_project_AlexNet/models/model_eurosat.pt", map_location=device))
+        model.load_state_dict(torch.load("models/model_eurosat.pt", map_location=device))
         model.to(device)
         model.eval()
         return model
